@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
+import SummaryCards from './components/SummaryCards';
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
       <Navbar />
       <div className='flex flex-row'>
         <Sidebar />
-        <Main />
+        <Main  />
       </div>
     </div>
   )
