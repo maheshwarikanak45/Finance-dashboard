@@ -22,7 +22,7 @@ const ExpensePieChart = () => {
 
   return (
     <div>
-        <PieChart width = {400} height = {400}>
+        <PieChart width = {300} height = {300}>
             <Pie data = {data} dataKey = "value" nameKey = "name">
                 {data.map((entry, index) => (
                     <Cell key = {index} fill = {colors[index]} />

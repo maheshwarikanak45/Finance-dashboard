@@ -4,6 +4,7 @@ import TransactionForm from './TransactionForm'
 import SummaryCards from './SummaryCards'
 import TransactionList from './TransactionList'
 import ExpensePieChart from './ExpensePieChart'
+import ComparisonChart from './ComparisonChart'
 
 const Main = () => {
 
@@ -16,6 +17,7 @@ const Main = () => {
         <SummaryCards></SummaryCards>
         <TransactionList></TransactionList>
         <ExpensePieChart></ExpensePieChart>
+        <ComparisonChart></ComparisonChart>
     </div>
   )
 }
