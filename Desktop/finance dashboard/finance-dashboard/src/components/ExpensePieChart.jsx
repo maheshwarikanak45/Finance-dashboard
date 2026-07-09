@@ -22,7 +22,8 @@ const ExpensePieChart = () => {
 
   return (
     <div>
-        <PieChart width = {300} height = {300}>
+        <h2 className='text-lg font-semibold'>Spending by Category</h2>
+        <PieChart width = {280} height = {280}>
             <Pie data = {data} dataKey = "value" nameKey = "name">
                 {data.map((entry, index) => (
                     <Cell key = {index} fill = {colors[index]} />

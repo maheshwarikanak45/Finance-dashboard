@@ -37,29 +37,34 @@ const TransactionForm = () => {
     })
 
   return (
-    <div>
-        <h2>Add Transaction</h2>
-        <form onSubmit={handleSubmit}>
+    <div className='bg-white rounded-2xl p-6 border'>
+        <h2 className='text-lg font-semibold mb-4'>Add Transaction</h2>
+        <form onSubmit={handleSubmit} className='grid grid-cols-3 gap-4'>
+            <div className='flex flex-col gap-1'>
             <label>Title</label>
-            <input 
+            <input className='w-34'
             type='text'
             value={formData.title}
             onChange={(e) => {
                 setformData({...formData, title: e.target.value})
             }} 
             placeholder='e.g. Salary' />
+            </div>
             
+            <div className='flex flex-col gap-1'>
             <label>Amount</label>
-            <input
+            <input className='w-34'
             type='number'
             value={formData.amount}
             onChange={(e) => {
                 setformData({...formData, amount: e.target.value})
             }}
             placeholder='e.g. 40000' />
+            </div>
 
+            <div className='flex flex-col gap-1'>
             <label>Type</label>
-            <select
+            <select className='w-34'
             value={formData.type}
             onChange={(e) => {
                 setformData({...formData, type: e.target.value})
@@ -68,9 +73,11 @@ const TransactionForm = () => {
                 <option value="income">Income</option>
                 <option value="expense">Expense</option>
             </select>
+            </div>
 
+            <div className='flex flex-col gap-1'>
             <label>Category</label>
-            <select
+            <select className='w-34'
             value={formData.category}
             onChange={(e) => {
                 setformData({...formData, category: e.target.value})
@@ -85,17 +92,20 @@ const TransactionForm = () => {
                 <option value="entertainment">Entertainment</option>
                 <option value="other">Other</option>
             </select>
+            </div>
 
+            <div className='flex flex-col gap-1'>
             <label>Date</label>
-            <input 
+            <input className='w-34'
             type='date'
             value={formData.date}
             onChange={(e) => {
                 setformData({...formData, date: e.target.value})
             }}
             />
+            </div>
             
-            <button>Add Transaction</button>
+            <button className='col-span-3 border p-3 rounded-2xl cursor-pointer'>Add Transaction</button>
         </form>
         
     </div>

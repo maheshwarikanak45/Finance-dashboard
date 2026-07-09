@@ -12,12 +12,14 @@ const Main = () => {
   console.log(state)
 
   return (
-    <div className='p-6 flex justify-center'>
-        <TransactionForm></TransactionForm>
-        <SummaryCards></SummaryCards>
-        <TransactionList></TransactionList>
-        <ExpensePieChart></ExpensePieChart>
-        <ComparisonChart></ComparisonChart>
+    <div className='p-6 flex flex-col gap-6 justify-center'>
+        <TransactionForm />
+        <SummaryCards />
+        <div className='flex flex-row gap-18 py-8'>
+        <ExpensePieChart />
+        <ComparisonChart />
+        </div>
+        <TransactionList />
     </div>
   )
 }
