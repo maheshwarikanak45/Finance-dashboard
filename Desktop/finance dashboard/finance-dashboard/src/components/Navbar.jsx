@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='flex flex-row justify-between items-center border-b text-2xl px-6 py-4'>
+    <div className='flex flex-row justify-between items-center   border-b border-gray-400 text-2xl px-6 py-4'>
         <h3>Finance dashboard</h3>
         <div className='flex flex-row gap-5'>
             <p>June 2026</p>

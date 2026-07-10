@@ -37,7 +37,7 @@ const TransactionForm = () => {
     })
 
   return (
-    <div className='bg-white rounded-2xl p-6 border'>
+    <div className='bg-white rounded-2xl p-6   border  border border-gray-400'>
         <h2 className='text-lg font-semibold mb-4'>Add Transaction</h2>
         <form onSubmit={handleSubmit} className='grid grid-cols-3 gap-4'>
             <div className='flex flex-col gap-1'>
@@ -105,7 +105,7 @@ const TransactionForm = () => {
             />
             </div>
             
-            <button className='col-span-3 border p-3 rounded-2xl cursor-pointer'>Add Transaction</button>
+            <button className='col-span-3   border  border border-gray-400 p-3 rounded-2xl cursor-pointer'>Add Transaction</button>
         </form>
         
     </div>
