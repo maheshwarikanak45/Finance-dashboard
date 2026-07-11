@@ -105,7 +105,7 @@ const TransactionForm = () => {
             />
             </div>
             
-            <button className='col-span-3   border  border border-gray-400 p-3 rounded-2xl cursor-pointer'>Add Transaction</button>
+            <button className='col-span-3 border border-gray-400 p-3 rounded-2xl cursor-pointer'>Add Transaction</button>
         </form>
         
     </div>

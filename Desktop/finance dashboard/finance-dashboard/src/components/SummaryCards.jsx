@@ -18,7 +18,7 @@ const SummaryCards = () => {
 
   return (
     <div className='flex flex-row px-10 h-40 gap-10'>
-    <div className='py-8 px-15   border  border border-gray-400 rounded-2xl w-65'>
+    <div className='py-8 px-15 border border-gray-400 rounded-2xl w-65'>
         <h3 className="flex items-center gap-2 text-lg">
             <Wallet size={20} className="text-gray-500"/>
             <span>Total balance</span>
@@ -33,7 +33,7 @@ const SummaryCards = () => {
         </p>
     </div>
 
-        <div className='py-8 px-15   border  border border-gray-400 rounded-2xl w-65'>
+        <div className='py-8 px-15 border border-gray-400 rounded-2xl w-65'>
             <h3 className="flex items-center gap-2 text-lg">
             <TrendingUp size={20} />
             <span>Total income</span>
@@ -48,7 +48,7 @@ const SummaryCards = () => {
             </p>
         </div>
 
-        <div className='py-8 px-15   border  border border-gray-400 text-lg rounded-2xl w-65'>
+        <div className='py-8 px-15 border border-gray-400 text-lg rounded-2xl w-65'>
             <h3 className="flex items-center gap-2 text-lg">
             <TrendingDown size={20} />
             <span>Total expense</span>
