@@ -97,6 +97,13 @@ const TransactionList = () => {
                 onClick={() => dispatch ({type: "DELETE_TRANSACTION", payload: transaction.id})} >
                     Delete
                 </button>
+                <button className=' text-black text-sm cursor-pointer'
+                onClick={() => {
+                    dispatch ({type: "SET_EDITING", payload: transaction})
+                    window.scrollTo({top: 0, behavior: 'smooth'})
+                    }} >
+                    Edit
+                </button>
                 </div>
             </div>
         ))}

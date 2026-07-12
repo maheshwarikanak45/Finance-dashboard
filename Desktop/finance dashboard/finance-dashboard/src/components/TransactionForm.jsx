@@ -1,9 +1,16 @@
-import React, { useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import { useFinance } from '../context/FinanceContext'
 
 const TransactionForm = () => {
 
-    const {dispatch} = useFinance()
+    const {state, dispatch} = useFinance()
+
+    useEffect(() => {
+        if (state.editingTransaction) {
+            setformData(state.editingTransaction)
+        }
+    }, [state.editingTransaction])
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -11,14 +18,33 @@ const TransactionForm = () => {
             alert("Please fill all fields")
             return
         }
-        dispatch ({
-            type: "ADD_TRANSACTION",
+        if (state.editingTransaction) {
+            dispatch ({
+            type: "EDIT_TRANSACTION",
             payload: {
                 ...formData,
-                id: Date.now(),
                 amount: Number(formData.amount)
             }
-        })
+            })
+            dispatch({type: "SET_EDITING", payload: null})
+            setformData({
+            title: '',
+            amount: '',
+            type: 'income',
+            category: 'food',
+            date: ''
+        });
+            return;
+        }
+            dispatch ({
+                type: "ADD_TRANSACTION",
+                payload: {
+                    ...formData,
+                    id: Date.now(),
+                    amount: Number(formData.amount)
+                }
+            })
+        
         setformData({
             title: '',
             amount: '',
@@ -105,7 +131,9 @@ const TransactionForm = () => {
             />
             </div>
             
-            <button className='col-span-3 border border-gray-400 p-3 rounded-2xl cursor-pointer'>Add Transaction</button>
+            <button className='col-span-3 border border-gray-400 p-3 rounded-2xl cursor-pointer'>
+                {state.editingTransaction ? 'Update Transaction' : 'Add Transaction'}                
+                </button>
         </form>
         
     </div>
